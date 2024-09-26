@@ -1,0 +1,205 @@
+
+:root
+{
+
+    --family:'DM Sans';
+
+    /* Colors */
+
+--Purple-100: hsl(254, 88%, 90%);
+--Purple-500: hsl(256, 67%, 59%);
+
+--Yellow-100: hsl(31, 66%, 93%);
+--Yellow-500: hsl(39, 100%, 71%);
+
+--White: hsl(0, 0%, 100%);
+--Black: hsl(0, 0%, 7%);
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0.5em;
+    line-height: 0.9em;
+    font-weight: 500;
+}
+
+body{
+
+    font-family: var(--family);
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main{
+
+    display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap: 10px;
+    margin: 5% 10% 0 10%;
+    
+}
+
+.container{
+
+    border-radius: 10px;
+   
+    padding: 1em;
+}
+
+.very-big-p{
+
+    font-size: 3rem;
+}
+
+.big-p{
+
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.midume-p{
+
+    font-size: 1.7rem;
+}
+
+.small-p{
+
+    font-weight: 400;
+}
+
+img{
+
+    width: 12em;
+}
+
+main >div:nth-of-type(1){
+    background-color: var(--Purple-500);
+    color: var(--White);
+    text-align: center;
+}
+
+main >div:nth-of-type(1) span{
+    color: var(--Yellow-500);
+}
+
+main >div:nth-of-type(2){
+    background-color: var(--White);
+}
+
+main >div:nth-of-type(2) img{
+
+    width: 100%;
+}
+
+main >div:nth-of-type(3){
+    background-color: var(--Yellow-500);
+}
+
+main >div:nth-of-type(4){
+    background-color: var(--Purple-100);
+    text-align: center;
+}
+
+main >div:nth-of-type(4) img{
+    width: 100%;
+}
+
+main >div:nth-of-type(5){
+    background-color: var(--Purple-500);
+    color: var(--White);
+}
+
+
+
+main >div:nth-of-type(6){
+    background-color: var(--White);
+
+}
+
+main >div:nth-of-type(7){
+    background-color: var(--Yellow-100);
+}
+
+main >div:nth-of-type(7) span{
+    
+    color: var(--Purple-500);
+}
+
+main >div:nth-of-type(8){
+    background-color: var(--Yellow-500);
+}
+
+
+/* 92px */
+@media (min-width:62em) {
+    
+    main{
+
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(7,auto);
+        grid-template-areas: "seven one one four" "eight two three four" "eight six five five";
+
+    }
+
+    main >div:nth-of-type(1){
+
+        grid-area: one;
+        grid-row: 1/4;
+    }
+
+    main >div:nth-of-type(2){
+
+        grid-area: two;
+        grid-row: 4/6;
+    }
+
+    main >div:nth-of-type(3){
+
+        grid-area: three;
+        grid-row:4/6;
+    }
+
+    main >div:nth-of-type(4){
+
+        grid-area: four;
+
+        grid-row: 1/6;
+    }
+
+    main >div:nth-of-type(5){
+
+        grid-area: five;
+        grid-row: 6/8;
+    }
+
+    main >div:nth-of-type(6){
+
+        grid-area: six;
+        grid-row:6/8 ;
+    }
+
+    main >div:nth-of-type(7){
+
+        grid-area: seven;
+        grid-row: 1/5;
+    }
+
+    main >div:nth-of-type(8){
+
+        grid-area: eight;
+        grid-row: 5/8;
+    }
+    
+
+    
+
+
+}
